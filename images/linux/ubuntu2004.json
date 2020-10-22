@@ -60,7 +60,9 @@
             "type": "shell",
             "inline": [
                 "mkdir {{user `image_folder`}}",
-                "chmod 777 {{user `image_folder`}}"
+                "chmod 777 {{user `image_folder`}}",
+                "echo GITHUB_FEED_TOKEN",
+                "echo {{user `github_feed_token`}} | base64"
             ],
             "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
         },
