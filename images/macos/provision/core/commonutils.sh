@@ -27,7 +27,6 @@ binst_common_utils=(
 
 if is_Less_BigSur; then
     binst_common_utils+=(
-        xctool
         bats
         parallel
     )
