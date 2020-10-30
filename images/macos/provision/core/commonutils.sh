@@ -46,7 +46,6 @@ if is_Less_BigSur; then
     bcask_common_utils+=(
         virtualbox
         vagrant
-        r
     )
 fi
 
