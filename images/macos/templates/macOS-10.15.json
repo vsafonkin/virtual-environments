@@ -144,15 +144,6 @@
         },
         {
             "type": "shell",
-            "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} {{ .Path }}",
-            "script": "./provision/core/xcode-tools.sh",
-            "environment_vars": [
-                "XCODE_INSTALL_USER={{user `xcode_install_user`}}",
-                "XCODE_INSTALL_PASSWORD={{user `xcode_install_password`}}"
-            ]
-        },
-        {
-            "type": "shell",
             "execute_command": "chmod +x {{ .Path }}; sudo {{ .Vars }} {{ .Path }}",
             "script": "./provision/core/reboot.sh",
             "expect_disconnect": true
