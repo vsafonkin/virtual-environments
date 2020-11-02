@@ -196,7 +196,6 @@ installNuget() {
 
   download_with_retries $NUGET_URL "/tmp" "nuget.exe"
   sudo mv /tmp/nuget.exe $TMPMOUNT
-  rm -f /tmp/nuget.exe
   sudo chmod a+x nuget.exe
 }
 
