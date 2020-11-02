@@ -10,9 +10,9 @@ download_with_retries() {
     local COMPRESSED="$4"
 
     if [[ $COMPRESSED == "compressed" ]]; then
-        COMMAND="sudo curl $URL -4 -sL --no-buffer --compressed -o '$DEST/$NAME'"
+        COMMAND="curl $URL -4 -sL --no-buffer --compressed -o '$DEST/$NAME'"
     else
-        COMMAND="sudo curl $URL -4 -sL --no-buffer -o '$DEST/$NAME'"
+        COMMAND="curl $URL -4 -sL --no-buffer -o '$DEST/$NAME'"
     fi
 
     echo "Downloading $URL..."
